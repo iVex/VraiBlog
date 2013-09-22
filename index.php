@@ -33,6 +33,7 @@ $req = $bdd->query('SELECT id, id_membre, titre, post, DATE_FORMAT(date, \'%d/%m
 														}
 														?>
 												</div>
+												<div class="suite"><a name="suite" href="lecture-<?php echo $donnees['id']; ?>">Lire la suite</a></div>
 											</div>
 										</div>
 									</div>

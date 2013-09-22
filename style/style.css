@@ -18,15 +18,17 @@
 #menu .first { border-left: none;}
 
 /* Corps */
-#index_cat #news {width: 65%;}
-#index_cat #news .billet{width: 65%;margin-left: auto;margin-bottom:10px;}
+#index_cat #news {width:100%;padding-top: 20px;}
+#index_cat #news .billet{width: 700px;margin: 0 auto;margin-bottom: 0 auto;border:1px solid #bc6687; border-radius:5px;}
 #index_cat #news .billet .titre{width:700px;height:100px;}
 #index_cat #news .billet .titre .titre_content {line-height:35px;font-size:18px; padding-left:53px;}
 #index_cat #news .billet .titre .titre_info div{display:inline-block;}
 #index_cat #news .billet .titre .titre_info {font-size:11px; line-height:15px; color:gray;padding-left:53px;}
 #index_cat #news .billet .titre .titre_info .nombre{padding-left:65%;}
-#index_cat #news .billet .content {padding:7px; margin-top:-50px;margin-left: 80px;border-radius:5px solid #bc6687;}
+#index_cat #news .billet .content {padding:7px; margin-top:-50px;margin-left: 80px;}
+#index_cat #news .billet .suite{float:right;margin-right: 80px;background-color: #bc6687;color:#FFF;padding:7px; margin-bottom: 50px;}
+#index_cat #news .billet .suite a{text-decoration: none;color:#FFF;}
 
 /* Footer */
-#footer { box-shadow: 2px 0px 2px black; bottom: 5px; margin-bottom: -15px; margin-left:17.5%;text-align:center; position: absolute; width: 65%; overflow: hidden; height: 50px; background: #bc6687;	border-radius: 5px 5px 0px 0px;}
+#footer { box-shadow: 2px 0px 2px black; bottom: 5px; margin-bottom: -10px; margin-left:17.5%;text-align:center; position: fixed; width: 65%; overflow: hidden; min-height: 50px; background: #bc6687;	border-radius: 5px 5px 0px 0px;}
 #footer .copyright { color: #FFFFFF; text-decoration:none; letter-spacing:1px;}
