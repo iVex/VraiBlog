@@ -4,3 +4,97 @@ HOW TO INSTALL :
 
 Got an apache web server (I use wamp on windows, and httpd on fedora), with php5 and mysql. Change the includes/bdd.php to change the database connection.
 All included files are in includes/header.php .
+
+HOW TO ADD THE DATABASE :
+
+Go into your database and paste this into :
+
+-- phpMyAdmin SQL Dump
+-- version 4.0.4
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Dim 22 Septembre 2013 à 15:04
+-- Version du serveur: 5.6.12-log
+-- Version de PHP: 5.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `vraiblogdb`
+--
+CREATE DATABASE IF NOT EXISTS `vraiblogdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `vraiblogdb`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `membres`
+--
+
+CREATE TABLE IF NOT EXISTS `membres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(15) NOT NULL,
+  `mdp` text NOT NULL,
+  `email` text NOT NULL,
+  `avatar` text NOT NULL,
+  `rang` int(11) NOT NULL,
+  `date_inscription` int(11) NOT NULL,
+  `date_naissance` date NOT NULL,
+  `code_confirmation` text NOT NULL,
+  `connecte` int(11) NOT NULL,
+  `cover` text NOT NULL,
+  `cover_top` int(11) NOT NULL,
+  `cover_left` int(11) NOT NULL,
+  `crypt_key` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+
+-- Structure de la table `post_blog`
+--
+
+CREATE TABLE IF NOT EXISTS `post_blog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_membre` int(11) NOT NULL,
+  `titre` varchar(255) NOT NULL,
+  `post` text NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `post_blog`
+--
+
+INSERT INTO `post_blog` (`id`, `id_membre`, `titre`, `post`, `date`) VALUES
+(1, 24, 'dsfsfdf', 'dfsdfsdfsdf', '2013-09-20 18:13:14'),
+(2, 24, 'test', 'sfhjhdgs', '2013-09-20 18:17:06'),
+(3, 24, 'test image', '[img]https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/555831_306387849504116_1414099549_n.jpg[/img]', '2013-09-21 19:20:34'),
+(4, 24, 'Testsdqsds', '[url]http://unvraiblog.besaba.com[/url]', '2013-09-21 20:10:54');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `post_commentaires`
+--
+
+CREATE TABLE IF NOT EXISTS `post_commentaires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_post` int(11) NOT NULL,
+  `id_membre` int(11) NOT NULL,
+  `texte` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
