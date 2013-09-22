@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(http://fonts.googleapis.com/css?family=Abel|Satisfy);
+
+/* Header */
+
+.row{background:#FFFFFF;}
+
+	/* Logo */
+#logo { overflow: hidden; height: 120px; margin-bottom:5px;}
+#logo h1 a {	display: block; letter-spacing: -2px; text-align: center; text-decoration: none; text-transform: lowercase; font-family: 'Satisfy', cursive; font-size: 54pt; font-weight: 200; color: #bc6687; top:0px; position:relative;}
+#logo p { text-align: center; text-transform: uppercase; font-size: 14pt; font-family: 'Oswald', sans-serif; font-weight: 200 }
+
+	/* Menu */
+#menu { margin-bottom:50px;box-shadow: 2px 2px 2px black;display:inline-block; text-align:center; width: 65%; overflow: hidden; height: 50px; background: #bc6687; border-radius: 5px; left:17.5%;position:relative;}
+#menu li { display: inline-block;	/* border-left: 1px solid /* #9F9F9F */; }
+#menu a { display: block;	height: 50px; padding: 0px 20px; text-decoration: none; text-transform: uppercase; font-family: 'Oswald', sans-serif; font-size: 12pt;	font-weight: 200; color: #FFFFFF; }
+#menu a:hover { color: #2e2e2e;}
+#menu .first { border-left: none;}
+
+/* Corps */
+#index_cat #news {width: 65%;}
+#index_cat #news .billet{width: 65%;margin-left: auto;margin-bottom:10px;}
+#index_cat #news .billet .titre{width:700px;height:100px;}
+#index_cat #news .billet .titre .titre_content {line-height:35px;font-size:18px; padding-left:53px;}
+#index_cat #news .billet .titre .titre_info div{display:inline-block;}
+#index_cat #news .billet .titre .titre_info {font-size:11px; line-height:15px; color:gray;padding-left:53px;}
+#index_cat #news .billet .titre .titre_info .nombre{padding-left:65%;}
+#index_cat #news .billet .content {padding:7px; margin-top:-50px;margin-left: 80px;border-radius:5px solid #bc6687;}
+
+/* Footer */
+#footer { box-shadow: 2px 0px 2px black; bottom: 5px; margin-bottom: -15px; margin-left:17.5%;text-align:center; position: absolute; width: 65%; overflow: hidden; height: 50px; background: #bc6687;	border-radius: 5px 5px 0px 0px;}
+#footer .copyright { color: #FFFFFF; text-decoration:none; letter-spacing:1px;}
