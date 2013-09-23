@@ -70,17 +70,6 @@ CREATE TABLE IF NOT EXISTS `post_blog` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
---
--- Contenu de la table `post_blog`
---
-
-INSERT INTO `post_blog` (`id`, `id_membre`, `titre`, `post`, `date`) VALUES
-(1, 24, 'dsfsfdf', 'dfsdfsdfsdf', '2013-09-20 18:13:14'),
-(2, 24, 'test', 'sfhjhdgs', '2013-09-20 18:17:06'),
-(3, 24, 'test image', '[img]https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/555831_306387849504116_1414099549_n.jpg[/img]', '2013-09-21 19:20:34'),
-(4, 24, 'Testsdqsds', '[url]http://unvraiblog.besaba.com[/url]', '2013-09-21 20:10:54');
-
--- --------------------------------------------------------
 
 --
 -- Structure de la table `post_commentaires`
