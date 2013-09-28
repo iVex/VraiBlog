@@ -60,10 +60,10 @@ $texte = str_replace(':s', '<img src="./images/smileys/confus.gif" title="confus
 $texte = str_replace(':O', '<img src="./images/smileys/choc.gif" title="choc" alt="choc" />', $texte);
 $texte = str_replace(':question:', '<img src="./images/smileys/question.gif" title="?" alt="?" />', $texte);
 $texte = str_replace(':exclamation:', '<img src="./images/smileys/exclamation.gif" title="!" alt="!" />', $texte);
- 
+
 //Mise en forme du texte
 //gras
-$texte = preg_replace('`\[g\](.+)\[/g\]`isU', '<strong>$1</strong>', $texte); 
+$texte = preg_replace('`\[g\](.+)\[/g\]`isU', '<strong>$1</strong>', $texte);
 //italique
 $texte = preg_replace('`\[i\](.+)\[/i\]`isU', '<em>$1</em>', $texte);
 //souligné
@@ -73,14 +73,20 @@ $texte = preg_replace('`\[t\](.+)\[/t\]`isU', '<s>$1</s>', $texte);
 //Titre h1
 $texte = preg_replace('`\[h1\](.+)\[/h1\]`isU', '<h1>$1</h1>', $texte);
 //lien
-$texte = preg_replace("#\[img\]((ht|f)tp://)([^\r\n\t<\"]*?)\[/img\]#sie", "'<img src=\\1' . str_replace(' ', '%20', '\\3') . '>'", $texte);
-$texte = preg_replace("#\[url\]((ht|f)tp://)([^\r\n\t<\"]*?)\[/url\]#sie", "'<a href=\"\\1' . str_replace(' ', '%20', '\\3') . '\" target=blank>\\1\\3</a>'", $texte);
-$texte = preg_replace("#\[img\]((ht|f)tps://)([^\r\n\t<\"]*?)\[/img\]#sie", "'<img src=\\1' . str_replace(' ', '%20', '\\3') . '>'", $texte);
-$texte = preg_replace("#\[url\]((ht|f)tps://)([^\r\n\t<\"]*?)\[/url\]#sie", "'<a href=\"\\1' . str_replace(' ', '%20', '\\3') . '\" target=blank>\\1\\3</a>'", $texte);
-$texte = preg_replace("/\[url=(.+?)\](.+?)\[\/url\]/", "<a href=$1 target=blank>$2</a>", $texte);
-//etc., etc.
- 
+$texte = preg_replace('#http://[a-z0-9._/-]+#i', '<a href="$0">$0</a>', $texte);
+$texte = preg_replace('#https://[a-z0-9._/-]+#i', '<a href="$0">$0</a>', $texte);
+$texte = preg_replace('#ftp://[a-z0-9._/-]+#i', '<a href="$0">$0</a>', $texte);
+$texte = preg_replace('#ftps://[a-z0-9._/-]+#i', '<a href="$0">$0</a>', $texte);
+
 //On retourne la variable texte
 return $texte;
+}
+function cookietosession($bdd)
+{
+	$req = $bdd->query('SELECT * FROM membres WHERE id = "'.$_COOKIE['user_id'].'"');
+	while($resultat = $req->fetch())
+	{
+		$_SESSION['id'] = $resultat['id'];
+	}
 }
 ?>

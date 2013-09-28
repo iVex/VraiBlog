@@ -1,0 +1,65 @@
+html{position:relative;min-height:100%;}
+body{margin: 0 0 70px;background: url(../style/img/background.png) repeat-y;}
+
+/* Header */
+#header {background-color: #343131; padding: 0;display: inline-block;width:100%;height: 80px;}
+#header .logo{float:left;width:180px;height:35px;display:block;background:url(../style/img/logo.png) no-repeat;margin-top: 23px;margin-left: 10px;}
+#header .menu{margin-top:30px;float: right;margin-right: 50px;}
+#header .menu {display: inline-block;width: 50px;margin-right: 15px;}
+#header .menu {text-decoration: none;color: #FFF}
+#header .rubriques{float:right;text-align:center;display: inline-block;margin-right: 15px;}
+#header .rubriques a{display: inline-block;text-decoration: none;width:110px;}
+#header .rubriques .rubrique{height:80px;line-height: 80px;color:#FFF;font-size: 16px;padding: 0 7px;}
+#header .rubriques .rubrique:hover{background-color: #686262;cursor: pointer;}
+
+/* Corps */
+#corps {height: 100%; margin: 30px; background: #FFF;padding: 10px;box-shadow: 0px 0px 25px 2px #343131;}
+
+/* Posts */
+#news {width:65%;padding-top: 10px;padding-bottom: 10px;margin-left: 17.5%;}
+#news .billet{width: 90%;margin: 0 auto;margin-bottom: 0 auto;box-shadow: 0px 0px 10px 1px #343131;}
+#news .billet .titre{width:100%;}
+#news .billet .titre .titre_content {line-height:35px;font-size:18px}
+#news .billet .titre .titre_info div{display:inline-block;}
+#news .billet .titre .titre_info {font-size:11px; line-height:15px; color:gray;}
+#news .billet .titre .titre_info .nombre{float:right}
+#news .billet .content:after{content: " ";display: block;height: 0;clear: both;}
+#news .billet .content_billet{width:90%;margin:0 auto;}
+#news .billet .content {padding:7px;}
+#news .billet .suite{overflow:auto;float:right;background-color: #5a6fcb;color:#FFF;padding:7px; width: 70px;margin-top:10px}
+#news .billet .suite a{text-decoration: none;color:#FFF;}
+
+/* Connexion */
+.connected {text-align: center;font-size:20px;margin-left: 5px;}
+.connected a{text-decoration: none;color: #000;}
+#connexion {text-align: center; margin-left: 50px;margin-top: 10px;}
+#connexion .form {vertical-align: middle; display: inline-block;}
+#connexion .form .pseudo {width: 250px; background-color: #FFFFFF;border:solid 1px #BFBDBD; color: #979797;height: 28px; padding-left:10px; width: 191px; border-radius: 5px;}
+#connexion .form .mdp {width: 250px; background-color: #FFFFFF;border:solid 1px #BFBDBD; color: #979797;height: 28px; padding-left:10px; width: 191px; border-radius: 5px;}
+#connexion .form .final {display: block;}
+#connexion .form .final .checkbox input{display: none;}
+#connexion .form .final .checkbox .rounded{position: relative;vertical-align: middle;background-color: #FFF; border: 3px solid #bdc3c7; width: 9px; height: 9px; display: inline-block;border-radius: 8px;}
+#connexion .form .final .checkbox input:checked + .rounded {border-color: #bc6687;}
+#connexion .form .final .checkbox input:checked + .rounded:after{content:'';display: block;width: 5px; height: 5px; background-color: #bc6687;position: absolute;top: 2px;left:2px;border-radius: 2px;}
+#connexion .form .final .btn {margin-top: 10px;font-family: sans-serif;color: #000;vertical-align: middle;border:1px solid #bdbdbd; width: 70px; height:30px; border-radius: 5px;}
+#connexion .inscription {margin-left:41.5%;margin-top: 10px;font-family: sans-serif;color: #000;vertical-align: middle;border:1px solid #bdbdbd; width: 200px; height:30px; border-radius: 5px;}
+#connexion .inscription div{vertical-align: middle;overflow: hidden;margin-top: 2px;}
+#connexion .inscription a{text-decoration: none;color: #bdbdbd;}
+
+/* Inscription */
+#inscription {text-align: center; margin-left: 50px;}
+#inscription .form {vertical-align: middle; display: inline-block;}
+#inscription .form .pseudo {text-align: center;width:310px;}
+#inscription .form .pass {margin-bottom: 10px;margin-top: 10px; width: 150px;}
+#inscription .form .email {text-align: center; width:310px;}
+#inscription .form .btn {margin-top: 10px;font-family: 'Oswald', sans-serif;color: #FFF;vertical-align: middle;background-color: #bc6687;border:none; width: 70px; height:30px; border-radius: 5px;}
+
+/* Footer */
+footer {background-color: #343131; position:absolute;bottom:0;width: 100%;display: inline-block;}
+footer .copyright { position:relative;clear:both;text-align: center;color: #FFFFFF; text-decoration:none; letter-spacing:1px;overflow: hidden;clear: both;}
+footer .copyright p a {text-decoration: none;}
+footer .copyright p a b {text-transform: uppercase;}
+
+/* Page 404 */
+.erreur {text-align: center;}
+.erreur img{max-width: 35%;}

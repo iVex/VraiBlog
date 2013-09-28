@@ -1,27 +1,41 @@
-<?php include 'includes/bdd.php';include 'includes/fonctions.php';?>
-<!DOCTYPE html>
+<?php include 'includes/fonctions.php'; include 'includes/bdd.php';
+if(isset($_COOKIE['user_id']))
+{
+    cookietosession($bdd);
+}
+?>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf8" />
-		<title>Blog Ozanam</title>
-		<link rel="stylesheet" media="screen" type="text/css" href="style/style.css" />
-	</head>
-	<section>
-		<header>
-			<div class="row"><div class="12u" id="logo"> <!-- Logo --><h1><a href="index.php" class="mobileUI-site-name">Blog Ozanam 1°SB</a></h1></div>
-			</div>
-			<div class="row">
-				<div class="12u" id="menu">
-						<ul>
-							<li class="first"><a href="index.php">Accueil</a></li>
-							<li><a href="#">Cours</a></li>
-							<?php if(!isset($_SESSION['id'])){ ?><li><a href="connexion.php">Connexion</a></li><?php } else { ?> <li><a href="redaction.php">Redaction</a></li> <li><a href="deconnexion.php">Deconnexion</a></li><?php } ?>
-						</ul>
-				</div>
-			</div>
-		</header>
-		<footer id="footer">
-			<p class="copyright">&copy Blog de Merde. Une création d'un <a href="crypt.php" style="text-decoration:none;color:#FFFFFF">parfait</a> inconnu.</p>
-		</footer>
-	</section>
-	<body id="corps">
+    <head>
+        <title>Tests</title>
+        <link rel="stylesheet" type="text/css" href="style/tests.css" />
+        <link rel="icon" href="style/img/favicon.ico" />
+    </head>
+    <body>
+        <header id="header">
+            <a class="logo" href="index.php"></a>
+            <div id="menu">
+                <div class="rubriques">
+                    <?php
+                    if (isset($_SESSION['id'])) {
+                    ?>
+                    <a href="redaction.php">
+                        <div class="rubrique test">
+                            <div class="test">Redaction</div>
+                        </div>
+                    </a>
+                    <a href="deconnexion.php">
+                        <div class="rubrique test2">
+                            <div class="test">D&eacuteconnexion</div>
+                        </div>
+                    </a>
+                    <?php } else{?>
+                    <a href="connexion.php">
+                        <div class="rubrique test">
+                            <div class="test">Connexion</div>
+                        </div>
+                    </a><?php } ?>
+                </div>
+            </div>
+        </header>
+        <div id="corps">

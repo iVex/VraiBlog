@@ -1,6 +1,9 @@
 RewriteEngine On
 Options -MultiViews
 
+ErrorDocument 404 /404
+
+RewriteRule ^404$ 404.php [L]
 RewriteRule ^image.php?(.*)/to/(.*)^ thumbs.php?image=$1&$width=$2 [L]
 RewriteRule ^erreur/([a-z0-9\-]+)$ erreur.php?e=$1 [L]
 RewriteRule ^index$ index.php [L]
